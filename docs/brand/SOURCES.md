@@ -1,9 +1,11 @@
 # Branding sources
 
-Alcaldía Mayor de Bogotá / Secretaría General identity: https://secretariageneral.gov.co/sites/default/files/logo-secretaria-general-se.png (retrieved 6 November 2026). Unmodified; displayed on white to preserve the asset’s original colors.
+The dashboard header uses original assets downloaded without modification from the official public GLOBO application on 6 November 2026:
 
-The public GLOBO v1.9.0 application at https://www.alcaldiabogota.gov.co/globo/ references assets/images/logo_sibi.png, which is the Bogotá city mark, not a distinct GLOBO mark. No separate official GLOBO symbol was verified. The application uses a typographic GLOBO label until an approved asset is supplied.
+- GLOBO, Sistema de Información Bogotá Global (726 × 352): https://www.alcaldiabogota.gov.co/globo/assets/images/GloboLogo.png . Stored as globo-oficial.png. Its original orange/gray artwork has a white background. CSS renders a white negative treatment on the navy dashboard; the source pixels and proportions are not redrawn.
+- Alcaldía Mayor de Bogotá D. C. / Consejería Distrital de Relaciones Internacionales / Bogotá (723 × 201): https://www.alcaldiabogota.gov.co/globo/assets/images/logo_secgen.png . Stored as alcaldia-consejeria-relaciones-internacionales.png. The transparent white artwork is displayed unchanged. Despite its source filename, the visible text identifies the Consejería, not Secretaría General.
+- Reference banner containing both identities: https://www.alcaldiabogota.gov.co/globo/assets/images/banner_home.jpg . These assets are referenced by the official public GLOBO application at https://www.alcaldiabogota.gov.co/globo/ .
 
-Interface guidance: https://github.com/emilkowalski/skills/blob/main/skills/apple-design/SKILL.md — hierarchy, restraint, typography, accessible disclosure, immediate feedback. Government identities remain unchanged.
+These identities are included for the requested visual prototype. This is not an institutional portal, endorsement, or connection to institutional data. All displayed records are synthetic.
 
-Orange GLOBO mark: exact user-supplied reference image (6 November 2026), displayed through a CSS viewport beside the GLOBO wordmark. No claim of a verified official SVG asset. The Alcaldía identity is rendered in white on navy for the requested negative treatment.
+Legacy files alcaldia-secretaria-general.png and globo-user-reference.png are not used by the dashboard header.

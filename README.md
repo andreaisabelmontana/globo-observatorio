@@ -10,7 +10,7 @@ Prototipo independiente para revisar la organización y visualización de inform
 - Filtros combinados de vigencia, sector y país para registros de cooperación. Las series estratégicas independientes se filtran por vigencia.
 - Mapa ampliable con selección de país, zoom, composición financiera/no monetaria, cooperantes, entidades, ODS y CSV de la selección.
 - Descarga CSV e impresión para guardar como PDF. Exploración complementaria de registros, revisión y calidad con datos ficticios.
-- Diseño adaptable a pantallas pequeñas e impresión. Marca vectorial blanca y tratamiento blanco de la identidad de Bogotá.
+- Diseño adaptable a pantallas pequeñas e impresión. Marcas originales de GLOBO y de la Alcaldía/Consejería, con tratamiento blanco en el encabezado.
 
 Hay vistas de demostración pública e interna, incorporadas tras la solicitud de Arturo. El catálogo mantiene los 17 indicadores, sin una selección arbitraria de diez. No se ha implementado autenticación ni autorización: ambas URLs son públicas y solo contienen datos ficticios. Las reglas de publicación y los permisos reales deben confirmarse con el equipo institucional.
 
@@ -35,7 +35,7 @@ React, TypeScript, Vite, CSS, Recharts, Lucide, d3-geo, topojson-client y cartog
 
 El documento «Análisis de Indicadores Reto Globo» orienta el catálogo. Fórmulas operativas, fuentes, metas y criterios adicionales son propuestas pendientes de validación. Recursos se informan en millones de COP; se separan aportes financieros y no monetarios. Asociación con ODS no prueba impacto causal. Las métricas de visitas, satisfacción, participación, decisiones y metas requieren verificar sus fuentes específicas, que podrían existir en GLOBO o en sistemas relacionados.
 
-Identidad de Bogotá: fuente oficial documentada en public/brand/SOURCES.md. Iconos ODS: Naciones Unidas, conservados completos. Símbolo de GLOBO: vector Lucide de demostración, no presentado como marca oficial verificada. Guía visual: https://github.com/emilkowalski/skills/blob/main/skills/apple-design/SKILL.md.
+Identidad de Bogotá: fuente oficial documentada en public/brand/SOURCES.md. Iconos ODS: Naciones Unidas, conservados completos. Identidad GLOBO: archivo original del portal público, sin redibujar; el tratamiento blanco se aplica mediante CSS. Guía visual: https://github.com/emilkowalski/skills/blob/main/skills/apple-design/SKILL.md.
 
 Para producción falta integrar el backend autorizado, definir permisos, comprobar reglas de aprobación y publicación, acordar la frecuencia de actualización y validar las fuentes y metodologías. No se distribuyen registros institucionales, credenciales ni documentos originales de referencia.
 

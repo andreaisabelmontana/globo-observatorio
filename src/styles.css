@@ -47,3 +47,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
 @media print{.reference-grid.public-grid>.exec-ods{grid-column:2/5!important}.reference-grid.exec-grid{grid-template-rows:auto auto auto!important}.reference-grid>.exec-panel{overflow:visible!important}.reference-grid .exec-trend-chart{height:180px!important}}
 
 .dashboard-intro{max-width:1050px;margin:0 0 14px;color:#bdcddd;font-size:11px;line-height:1.6}.dashboard-intro strong{font-weight:600;color:#e6edf4}@media print{.dashboard-intro{color:#222!important;font-size:9px}.dashboard-intro strong{color:#111!important}}
+
+/* Official source artwork, preserved byte-for-byte. The GLOBO white background
+   becomes black and blends into the navy surface for a negative treatment. */
+.reference-report .brief-heading{grid-template-columns:200px minmax(0,1fr) 235px}
+.reference-report .brief-globo-brand{display:block;position:relative;width:200px;height:86px;overflow:hidden}
+.reference-report .globo-official-logo{display:block;position:absolute;width:246px;height:auto;max-width:none;left:-20px;top:-20px;filter:grayscale(1) invert(1) brightness(6);mix-blend-mode:screen}
+.reference-report .brief-city-brand img{width:100%;max-width:none;height:auto;object-fit:contain;filter:none;clip-path:none}
+@media(max-width:1000px){.reference-report .brief-heading{grid-template-columns:170px minmax(0,1fr) 200px}.reference-report .brief-globo-brand{width:170px;height:74px}.reference-report .globo-official-logo{width:209px;left:-17px;top:-17px}}
+@media(max-width:640px){.reference-report .brief-heading{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:12px}.reference-report .brief-globo-brand{width:100%;max-width:170px;aspect-ratio:200/86;height:auto}.reference-report .globo-official-logo{width:123%;left:-10%;top:-23.25%}.reference-report .brief-title{grid-row:2;grid-column:1/-1}.reference-report .brief-city-brand{width:100%;max-width:210px;justify-self:end}}
