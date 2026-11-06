@@ -1,4 +1,4 @@
-import {group, summarize} from './cooperation.ts';
+import {group, summarize, cutoffYear} from './cooperation.ts';
 import type {Interaction} from './cooperation.ts';
 
 // Official SDG hues. These are topic labels, not modified UN emblems or icons.
@@ -10,7 +10,8 @@ export const goals: Record<number,{name:string;color:string;image:string}> = {
 };
 export function executiveSummary(rows:Interaction[],year:number) {
  const summary=summarize(rows),approved=summary.approved;
- const cutoff=`${year}-10-31`,deadline=`${year}-11-30`;
+ const referenceYear=cutoffYear(year);
+ const cutoff=`${referenceYear}-10-31`,deadline=`${referenceYear}-11-30`;
  const instruments=approved.filter(r=>r.type==='Convenio'||r.type==='Memorando');
  const states=[
  {name:'Vigentes · más de 30 días',short:'Vigentes',color:'#72C6A2',value:instruments.filter(r=>r.endDate>deadline).length},
