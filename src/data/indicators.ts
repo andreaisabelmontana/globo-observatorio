@@ -1,4 +1,4 @@
-export interface Indicator {id:number;name:string;dim:number;type:string;purpose:string;formula:string;source:string;audience:string;view:string;values:Record<string,number>;unit:string}
+export interface Indicator {id:number;name:string;dim:number;type:string;purpose:string;formula:string;source:string;view:string;values:Record<string,number>;unit:string}
 export const indicators: Indicator[] = [
   {
     "id": 1,
@@ -8,7 +8,6 @@ export const indicators: Indicator[] = [
     "purpose": "Indicadores con ficha, fuente y dato público disponibles al corte.",
     "formula": "Conteo de identificadores únicos de indicadores publicados al cierre del periodo.",
     "source": "Inventario de publicaciones",
-    "audience": "publica",
     "view": "Inventario y avance de publicación",
     "values": {
       "2024": 5,
@@ -25,7 +24,6 @@ export const indicators: Indicator[] = [
     "purpose": "Información pública reutilizable por terceros.",
     "formula": "Conteo de conjuntos únicos publicados y accesibles al cierre. No se suman versiones.",
     "source": "Catálogo de datos abiertos",
-    "audience": "publica",
     "view": "Catálogo con fecha y formato",
     "values": {
       "2024": 2,
@@ -42,7 +40,6 @@ export const indicators: Indicator[] = [
     "purpose": "Demanda de información internacional del Distrito.",
     "formula": "Conteo de visitas y de consultas como eventos separados; no equivalen a personas únicas.",
     "source": "Analítica web con exclusión de tráfico automatizado",
-    "audience": "interna",
     "view": "Tendencia mensual y comparación por evento",
     "values": {
       "2024": 9100,
@@ -59,7 +56,6 @@ export const indicators: Indicator[] = [
     "purpose": "Aprovechamiento de la información publicada.",
     "formula": "Conteo de eventos de descarga por tipo de recurso; admite repetición por usuario.",
     "source": "Registro de eventos de descarga",
-    "audience": "interna",
     "view": "Distribución por recurso y tendencia",
     "values": {
       "2024": 1230,
@@ -76,7 +72,6 @@ export const indicators: Indicator[] = [
     "purpose": "Apropiación social de la información de internacionalización.",
     "formula": "Usuarios únicos identificados con mecanismo consentido y deduplicado; segmentación declarada voluntariamente. No inferir identidad a partir de visitas.",
     "source": "Analítica consentida y caracterización voluntaria",
-    "audience": "interna",
     "view": "Usuarios únicos por tipo de actor",
     "values": {
       "2024": 1560,
@@ -93,7 +88,6 @@ export const indicators: Indicator[] = [
     "purpose": "Interacción entre el Distrito y los grupos de interés.",
     "formula": "Conteo de ejercicios distintos realizados, con evidencia y fecha de cierre en la vigencia.",
     "source": "Registro de participación y evidencias",
-    "audience": "publica",
     "view": "Conteo y distribución por modalidad",
     "values": {
       "2024": 6,
@@ -110,7 +104,6 @@ export const indicators: Indicator[] = [
     "purpose": "Percepción de utilidad, facilidad de uso y calidad de la información.",
     "formula": "Respuestas de 4 o 5 sobre 5 / respuestas válidas × 100. Definición operativa propuesta, pendiente de validación.",
     "source": "Encuesta voluntaria; mostrar muestra y periodo",
-    "audience": "publica",
     "view": "Distribución de respuestas, porcentaje y muestra",
     "values": {
       "2024": 76,
@@ -127,7 +120,6 @@ export const indicators: Indicator[] = [
     "purpose": "Capacidad de generar diálogo y colaboración.",
     "formula": "Conteo de aportes recibidos y deduplicados durante la vigencia; respuestas institucionales se cuentan aparte.",
     "source": "Registro de participación ciudadana",
-    "audience": "publica",
     "view": "Distribución por tipo y seguimiento agregado",
     "values": {
       "2024": 61,
@@ -144,7 +136,6 @@ export const indicators: Indicator[] = [
     "purpose": "Capacidad de transformar datos en información útil para la gestión.",
     "formula": "Conteo de productos analíticos distintos en operación; versiones y ejecuciones no se cuentan como productos nuevos.",
     "source": "Inventario de productos analíticos",
-    "audience": "interna",
     "view": "Inventario por tipo de producto",
     "values": {
       "2024": 3,
@@ -161,7 +152,6 @@ export const indicators: Indicator[] = [
     "purpose": "Uso documentado de evidencia en la gestión institucional.",
     "formula": "Conteo de decisiones o iniciativas únicas con referencia verificable a un producto o consulta de GLOBO. No implica causalidad.",
     "source": "Bitácora de decisiones con evidencia",
-    "audience": "interna",
     "view": "Registro trazable de decisiones y fuente",
     "values": {
       "2024": 8,
@@ -178,7 +168,6 @@ export const indicators: Indicator[] = [
     "purpose": "Capacidad para identificar oportunidades de cooperación.",
     "formula": "(Oportunidades de la vigencia − oportunidades de la vigencia anterior) / oportunidades de la vigencia anterior × 100. Base cero: no calculable.",
     "source": "Registro de oportunidades con origen analítico",
-    "audience": "interna",
     "view": "Comparación anual con base absoluta",
     "values": {
       "2024": 20,
@@ -195,7 +184,6 @@ export const indicators: Indicator[] = [
     "purpose": "Expansión de la red internacional de Bogotá.",
     "formula": "Conteo de aliados únicos cuya primera identificación ocurrió en la vigencia. Identificado no equivale a alianza formalizada.",
     "source": "Maestro de aliados e historial de primera identificación",
-    "audience": "publica",
     "view": "Nuevos aliados y evolución anual",
     "values": {
       "2024": 9,
@@ -212,7 +200,6 @@ export const indicators: Indicator[] = [
     "purpose": "Apropiación institucional de GLOBO.",
     "formula": "Entidades con al menos una consulta analítica registrada en los últimos 90 días al corte / universo de entidades aplicable × 100. Criterio propuesto; validar universo de 61 indicado en el documento.",
     "source": "Auditoría de uso institucional y maestro de entidades",
-    "audience": "interna",
     "view": "Cobertura institucional y brecha de adopción",
     "values": {
       "2024": 24,
@@ -229,7 +216,6 @@ export const indicators: Indicator[] = [
     "purpose": "Evolución de las conexiones internacionales gestionadas.",
     "formula": "Variación anual de relacionamientos únicos con registro validado y evidencia de análisis; no contar actualizaciones como nuevos relacionamientos.",
     "source": "Interacciones validadas y bitácora de análisis",
-    "audience": "publica",
     "view": "Serie anual y variación sobre base comparable",
     "values": {
       "2024": 101,
@@ -246,7 +232,6 @@ export const indicators: Indicator[] = [
     "purpose": "Evolución de instrumentos de cooperación apoyados por GLOBO.",
     "formula": "Variación anual del número de instrumentos únicos gestionados con evidencia de apoyo del sistema. No sumar registros repetidos del mismo instrumento.",
     "source": "Registro de instrumentos y trazabilidad",
-    "audience": "publica",
     "view": "Comparación anual por número de instrumentos",
     "values": {
       "2024": 21,
@@ -263,7 +248,6 @@ export const indicators: Indicator[] = [
     "purpose": "Valor económico de la cooperación internacional movilizada.",
     "formula": "Suma de valores en COP sin doble conteo; separar aporte financiero de valoración no monetaria. Documentar fecha, tasa de cambio, vigencia y método de valoración.",
     "source": "Registros aprobados, soportes y reglas de conversión",
-    "audience": "publica",
     "view": "Composición financiera y no monetaria; evolución",
     "values": {
       "2024": 15200,
@@ -280,7 +264,6 @@ export const indicators: Indicator[] = [
     "purpose": "Avance frente a objetivos estratégicos de ciudad.",
     "formula": "Avance físico validado / meta aprobada × 100 por objetivo. Un agregado requiere ponderaciones aprobadas. No inferir cumplimiento a partir del número de interacciones.",
     "source": "Matriz oficial de metas, evidencias y ponderaciones",
-    "audience": "publica",
     "view": "Avance por objetivo frente a meta",
     "values": {
       "2024": 29,
