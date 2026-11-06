@@ -13,3 +13,6 @@
 @media(min-width:1101px) and (max-width:1499px){.exec-grid{grid-template-rows:174px 184px 174px}.exec-partners>.exec-link{display:none}.exec-partners .exec-ranking{gap:5px}.exec-ranking li{font-size:9px}.exec-ranking li>strong{font-size:10px}}
 .exec-partners{overflow:hidden}
 .exec-entities .exec-ranking{gap:0}.exec-partners .exec-ranking{gap:4px}@media(min-width:1101px) and (max-width:1499px){.executive-capture .exec-grid{grid-template-rows:160px 174px 158px}.executive-capture .exec-partners .exec-ranking{gap:2px}.executive-capture .exec-goal-icon{height:52px}.executive-capture .exec-heading{margin-bottom:6px}.executive-capture .exec-kpi{min-height:100px}.executive-capture .exec-kpi>small{margin-top:5px}}
+
+/* Keep all report notes visible at laptop widths. */
+@media(min-width:1101px) and (max-width:1499px){.exec-grid{grid-template-rows:174px 200px 210px}.executive-capture .exec-grid{grid-template-rows:160px 200px 210px}}
