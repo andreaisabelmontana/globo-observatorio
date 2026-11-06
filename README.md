@@ -87,3 +87,7 @@ El mapa se amplía en un diálogo con selector de país, zoom, aportes financier
 Los 17 indicadores propuestos permanecen en el catálogo interno, agrupados por dimensión (10 en la selección pública propuesta). El catálogo abre con internacionalización para evitar 17 gráficos simultáneos. Los indicadores estratégicos siguen usando series ilustrativas independientes de las interacciones; no se afirma que sean mediciones oficiales.
 
 La identidad de Bogotá proviene del sitio oficial de Secretaría General; GLOBO conserva su rótulo tipográfico porque no se verificó un símbolo oficial independiente. Fuentes en public/brand/SOURCES.md. Se aplicó la guía Apple Design de Emil Kowalski para jerarquía, contención y tipografía; no se redistribuye el skill.
+
+### Reference layout correction
+
+The executive home again displays the full nine-panel composition without collapsed charts, matching the supplied navy dashboard reference: map, trend, cooperant ranking, entity ranking, sector composition, instrument states, Plan availability, ODS and alerts. Seven compact headline cards retain an explicit unavailable state for awards. A five-dimension indicator row links directly into the proposed 17-indicator catalogue (10 proposed public). The enlarged interactive map is preserved. The orange GLOBO mark uses the user-supplied image; the Bogotá identity is shown in white on navy.
