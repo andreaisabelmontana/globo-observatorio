@@ -77,3 +77,13 @@ El resumen ejecutivo calcula instrumentos únicamente para convenios y memorando
 - [Guía de uso ODS](https://unsdg.un.org/download/7777/497) y [material de comunicación](https://www.un.org/sustainabledevelopment/news/communications-material/). Los iconos no implican el aval de Naciones Unidas. Este prototipo no es un sitio oficial del Distrito ni de Naciones Unidas.
 
 Los documentos e imágenes originales recibidos para orientar el diseño no se incluyen en este repositorio ni en la publicación. No se agregó información institucional real. No hay integración con autenticación, bases de datos ni servicios originales de GLOBO.
+
+## Briefing ejecutivo y mapa ampliado
+
+La primera vista usa cuatro KPIs y prioriza tendencia, alcance geográfico, sectores y alertas. Una barra reúne vigencia, audiencia, filtros, PDF y CSV. Los rankings, ODS, estado de instrumentos y Plan Distrital se consultan en un detalle desplegable; las herramientas operativas tienen una entrada secundaria con etiquetas explicativas.
+
+El mapa se amplía en un diálogo con selector de país, zoom, aportes financieros/no monetarios, cooperantes, entidades, ODS y estados de instrumentos. El CSV del mapa usa su selección local. Aplicar al resumen conserva el filtro de país en el tablero.
+
+Los 17 indicadores propuestos permanecen en el catálogo interno, agrupados por dimensión (10 en la selección pública propuesta). El catálogo abre con internacionalización para evitar 17 gráficos simultáneos. Los indicadores estratégicos siguen usando series ilustrativas independientes de las interacciones; no se afirma que sean mediciones oficiales.
+
+La identidad de Bogotá proviene del sitio oficial de Secretaría General; GLOBO conserva su rótulo tipográfico porque no se verificó un símbolo oficial independiente. Fuentes en public/brand/SOURCES.md. Se aplicó la guía Apple Design de Emil Kowalski para jerarquía, contención y tipografía; no se redistribuye el skill.
