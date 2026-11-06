@@ -63,3 +63,17 @@ Guías de referencia consultadas: [GOV.CO](https://cdn.www.gov.co/v4/), [Observa
 3. GitHub Pages debe usar **Deploy from a branch → main → /docs**.
 
 No hay servidor, base de datos ni cuentas. Para producción privada se debe integrar el backend autorizado de GLOBO y su control de acceso.
+
+## Tablero ejecutivo · actualización noviembre de 2026
+
+La página inicial incorpora una vista ejecutiva con mapa, cooperación por mes, rankings, sectores, estados de instrumentos, ODS y alertas. «Vista para captura» oculta la navegación; Escape restaura la vista normal. PDF usa impresión en formato horizontal. «Explorar cooperación» mantiene los filtros, personalización y widgets anteriores, junto a seguimiento, indicadores y tablas.
+
+El resumen ejecutivo calcula instrumentos únicamente para convenios y memorandos aprobados. La versión anterior de exploración mantiene su definición de registros por fecha. Los valores siguen en millones de COP: no se inventa conversión a USD. Las metas del Plan Distrital de Desarrollo y los premios aparecen como pendientes de fuente, no como avances verificados.
+
+### Referencias visuales y uso de marca
+
+- [Manual de Marca Ciudad Bogotá, octubre de 2024](https://bogota.gov.co/bog/manual-de-marca-bogota.pdf): amarillo #F9D248 y rojo #E3272A. El azul oscuro es un fondo de interfaz propio, no un color oficial de Bogotá. Se usa una identificación tipográfica y no un escudo ni una marca de campaña recreada.
+- [Objetivos de Desarrollo Sostenible, Naciones Unidas](https://sdgs.un.org/es/goals): los siete archivos de `public/sdg/` son iconos oficiales en español, sin emblema de la ONU, conservados completos y sin alterar. Colores y pictogramas se usan solo para los ODS correspondientes.
+- [Guía de uso ODS](https://unsdg.un.org/download/7777/497) y [material de comunicación](https://www.un.org/sustainabledevelopment/news/communications-material/). Los iconos no implican el aval de Naciones Unidas. Este prototipo no es un sitio oficial del Distrito ni de Naciones Unidas.
+
+Los documentos e imágenes originales recibidos para orientar el diseño no se incluyen en este repositorio ni en la publicación. No se agregó información institucional real. No hay integración con autenticación, bases de datos ni servicios originales de GLOBO.
