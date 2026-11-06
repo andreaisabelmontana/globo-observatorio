@@ -45,3 +45,5 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
 
 @media(min-width:761px){.reference-grid.public-grid>.exec-ods{grid-column:2/5!important}}
 @media print{.reference-grid.public-grid>.exec-ods{grid-column:2/5!important}.reference-grid.exec-grid{grid-template-rows:auto auto auto!important}.reference-grid>.exec-panel{overflow:visible!important}.reference-grid .exec-trend-chart{height:180px!important}}
+
+.dashboard-intro{max-width:1050px;margin:0 0 14px;color:#bdcddd;font-size:11px;line-height:1.6}.dashboard-intro strong{font-weight:600;color:#e6edf4}@media print{.dashboard-intro{color:#222!important;font-size:9px}.dashboard-intro strong{color:#111!important}}

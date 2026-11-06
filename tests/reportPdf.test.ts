@@ -1,0 +1,10 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {buildReportPdf} from '../src/data/reportPdf.ts';
+import {interactions,filterRows} from '../src/data/cooperation.ts';
+import {indicators} from '../src/data/indicators.ts';
+const filters={year:0,sector:'',country:''};
+test('internal all-year PDF is valid and preserves scope and chronology',()=>{const doc=buildReportPdf({rows:interactions,filters,page:'dashboard',tab:'executive',indicators});const pdf=doc.output();assert.ok(pdf.startsWith('%PDF-'));assert.match(pdf,/DATOS FICTICIOS/);assert.match(pdf,/Todos los a/);assert.match(pdf,/Ene 2024/);assert.match(pdf,/Oct 2026/);assert.ok(doc.getNumberOfPages()>=3);});
+test('empty filtered PDF is safe and names the active filters',()=>{const f={year:2026,sector:'Ambiente',country:'Sin país'};const pdf=buildReportPdf({rows:filterRows(interactions,f),filters:f,page:'reports',tab:'executive',indicators}).output();assert.match(pdf,/Ambiente/);assert.match(pdf,/Sin registros/);assert.doesNotMatch(pdf,/NaN|Infinity/);});
+test('all-year indicator PDF does not add rates or users',()=>{const pdf=buildReportPdf({rows:interactions,filters,page:'dashboard',tab:'indicators',indicators}).output();assert.match(pdf,/Seleccione un a/);assert.doesNotMatch(pdf,/NaN|Infinity/);});
+test('review PDF contains only pending records',()=>{const rows=interactions.slice(0,4);const pdf=buildReportPdf({rows,filters,page:'review',tab:'executive',indicators}).output();assert.ok(pdf.includes(rows[0].id));for(const r of rows.filter(r=>r.status==='Aprobada'))assert.ok(!pdf.includes(r.id));});

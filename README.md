@@ -12,7 +12,7 @@ Prototipo independiente para revisar la organización y visualización de inform
 - Descarga CSV e impresión para guardar como PDF. Exploración complementaria de registros, revisión y calidad con datos ficticios.
 - Diseño adaptable a pantallas pequeñas e impresión. Marca vectorial blanca y tratamiento blanco de la identidad de Bogotá.
 
-No hay selector público/interno ni selección arbitraria de diez indicadores. Los enlaces antiguos con vista=publica o vista=interna abren el mismo tablero y se normalizan al cargar. No se ha implementado autenticación ni autorización. Las reglas de publicación y los permisos deben confirmarse con el equipo institucional.
+Hay vistas de demostración pública e interna, incorporadas tras la solicitud de Arturo. El catálogo mantiene los 17 indicadores, sin una selección arbitraria de diez. No se ha implementado autenticación ni autorización: ambas URLs son públicas y solo contienen datos ficticios. Las reglas de publicación y los permisos reales deben confirmarse con el equipo institucional.
 
 ## Ejecutar y verificar
 
@@ -33,7 +33,7 @@ React, TypeScript, Vite, CSS, Recharts, Lucide, d3-geo, topojson-client y cartog
 
 ## Fuentes y límites
 
-El documento «Análisis de Indicadores Reto Globo» orienta el catálogo. Fórmulas operativas, fuentes, metas y criterios adicionales son propuestas pendientes de validación. Recursos se informan en millones de COP; se separan aportes financieros y no monetarios. Asociación con ODS no prueba impacto causal. Las métricas de visitas, satisfacción, participación, decisiones y metas necesitan sus propias fuentes.
+El documento «Análisis de Indicadores Reto Globo» orienta el catálogo. Fórmulas operativas, fuentes, metas y criterios adicionales son propuestas pendientes de validación. Recursos se informan en millones de COP; se separan aportes financieros y no monetarios. Asociación con ODS no prueba impacto causal. Las métricas de visitas, satisfacción, participación, decisiones y metas requieren verificar sus fuentes específicas, que podrían existir en GLOBO o en sistemas relacionados.
 
 Identidad de Bogotá: fuente oficial documentada en public/brand/SOURCES.md. Iconos ODS: Naciones Unidas, conservados completos. Símbolo de GLOBO: vector Lucide de demostración, no presentado como marca oficial verificada. Guía visual: https://github.com/emilkowalski/skills/blob/main/skills/apple-design/SKILL.md.
 
@@ -45,7 +45,8 @@ Para producción falta integrar el backend autorizado, definir permisos, comprob
 - `?vista=interna`: resumen ejecutivo, alertas, revisión y calidad. Ambas son vistas públicas de un prototipo con datos ficticios; el selector no constituye autenticación.
 - “Todos los años” acumula recursos y registros de 2024–2026; mantiene países/cooperantes/entidades únicos. La tendencia conserva mes y año. No suma tasas ni usuarios entre vigencias.
 - Estados de instrumentos al corte de la última vigencia disponible cuando se seleccionan todos los años.
-- “Exportar PDF” abre la impresión del navegador: seleccionar “Guardar como PDF”. Conserva filtros, periodo y aviso de datos ficticios. No es una descarga directa automatizada.
+- En la vista interna, “Descargar PDF” genera un informe vectorial local con el periodo, los filtros, las cifras y el aviso de datos ficticios. El resumen incluye tendencia mensual, distribuciones y estados; las tablas y el catálogo exportan su propia selección. No usa un servicio externo.
+- En la vista pública, “Imprimir / PDF” conserva la impresión del navegador para guardar la pantalla como PDF.
 
 ### Fuentes por confirmar antes de integrar
 
