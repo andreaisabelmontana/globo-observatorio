@@ -46,6 +46,5 @@ export default function ExecutiveDashboard({internal,rows,historicalRows,previou
  {internal&&<Panel title="Alertas estratégicas" subtitle="Señales para priorizar el seguimiento" className="exec-alerts"><button onClick={()=>onNavigate('review')}><span><Clock3 size={14}/> Interacciones pendientes</span><strong>{d.pending}</strong><ChevronRight size={12}/></button><button onClick={()=>onTab('management')}><span><TriangleAlert size={14}/> Instrumentos por vencer</span><strong>{d.states[1].value}</strong><ChevronRight size={12}/></button><button onClick={()=>onTab('management')}><span><Info size={14}/> Instrumentos sin fecha</span><strong>{d.states[3].value}</strong><ChevronRight size={12}/></button><p className="exec-note">Ejemplos calculados con datos ficticios.</p></Panel>}
  </div></>}
  {internal&&<details className="more-indicators"><summary><span className="more-indicators-closed">Ver más indicadores</span><span className="more-indicators-open">Ver menos indicadores</span><ChevronDown size={16} aria-hidden="true"/></summary><ExecutiveIndicators rows={rows} year={filters.year} onSources={onInfo}/></details>}
- <footer className="exec-foot"><span>Fuente: registros sintéticos locales · No conectado a GLOBO institucional · Sin autenticación</span><button onClick={onInfo}>Criterios de cálculo <Info size={12}/></button></footer>
  </article>
 }
