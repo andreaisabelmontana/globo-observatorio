@@ -37,9 +37,9 @@ export function buildReportPdf({rows,filters,page,tab,indicators}:ReportOptions)
   paragraph(page==='review'?'Solo registros pendientes de aprobación.':'Incluye registros aprobados y en trámite de la vista interna. Los recursos oficiales no deben confundirse con valores aún en revisión.');
   table(['ID','Sector / país','Instrumento','Estado','M COP'],selected.map(r=>[r.id,`${r.sector} / ${r.country}`,r.type,r.status,format(r.financial+r.nonMonetary)]),[42,76,58,58,35]);
  }else if(tab==='indicators'){
-  paragraph('Series sintéticas independientes del registro de cooperación. Aquí solo aplica la vigencia; sector y país no filtran los indicadores. Fórmulas y fuentes sujetas a validación institucional.');
-  table(['#','Indicador propuesto','Valor ilustrativo','Fuente por verificar'],indicators.map(i=>[i.id,i.name,!filters.year?'Seleccione un año':`${format(i.id===13?i.values[filters.year]/61*100:i.values[filters.year])} ${i.id===13?'%':i.unit}`,i.source]),[12,105,47,105]);
-  paragraph('Todos los años no suma usuarios únicos, tasas ni estados. Las cifras faltantes no prueban que la fuente no exista en GLOBO.');
+  paragraph('Revisión de indicadores y fuentes pendientes. Solo recursos movilizados se calcula con registros aprobados de demostración; se aplican los filtros activos.');
+  table(['#','Indicador propuesto','Resultado / estado','Fuente por verificar'],indicators.map(i=>[i.id,i.name,i.id===16?`${format(rows.filter(r=>r.status==='Aprobada').reduce((n,r)=>n+r.financial+r.nonMonetary,0))} millones COP`:'Pendiente de fuente',i.source]),[12,105,47,105]);
+  paragraph('No se sustituyen fuentes pendientes con cifras ilustrativas. La disponibilidad de cada fuente debe confirmarse en GLOBO.');
  }else{
   heading('Resumen de cooperación aprobada');
   table(['Medida','Resultado','Alcance'],[
