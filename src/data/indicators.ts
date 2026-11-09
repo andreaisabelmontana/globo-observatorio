@@ -274,3 +274,27 @@ export const indicators: Indicator[] = [
   }
 ];
 export const dimensions = ['Transparencia y acceso a la información','Participación y apropiación','Decisiones basadas en evidencia','Eficiencia de la cooperación','Internacionalización de Bogotá'];
+
+// Proposed publication policy for this synthetic demonstrator. Institutional
+// owners must validate sources, aggregation and release before production use.
+export const indicatorAudience:Record<number,{audience:'public'|'internal'|'conditional';reason:string}>={
+ 1:{audience:'public',reason:'Inventario público de indicadores publicados; no incluye borradores.'},
+ 2:{audience:'public',reason:'Catálogo de conjuntos abiertos efectivamente accesibles.'},
+ 3:{audience:'public',reason:'Eventos agregados; sin IP, identificadores ni trazas individuales.'},
+ 4:{audience:'public',reason:'Descargas agregadas por recurso; sin actividad individual.'},
+ 5:{audience:'conditional',reason:'Publicar solo segmentos agregados, consentidos y con tamaños suficientes; validar anonimización.'},
+ 6:{audience:'public',reason:'Conteo de ejercicios públicos finalizados; sin identidades de participantes.'},
+ 7:{audience:'conditional',reason:'Validar encuesta, muestra, periodo y riesgo de identificación antes de publicar.'},
+ 8:{audience:'public',reason:'Conteo agregado de aportes; excluye textos, identidades y casos individuales.'},
+ 9:{audience:'internal',reason:'Inventario operativo para gestionar productos analíticos.'},
+ 10:{audience:'internal',reason:'Trazabilidad de decisiones e iniciativas que puede incluir información de gestión reservada.'},
+ 11:{audience:'internal',reason:'Oportunidades en análisis; publicación prematura puede afectar la gestión.'},
+ 12:{audience:'internal',reason:'Aliados prospectivos; identificación no equivale a relación confirmada.'},
+ 13:{audience:'internal',reason:'Auditoría de uso y adopción institucional para seguimiento del equipo.'},
+ 14:{audience:'conditional',reason:'Validar definición de relacionamiento analizado y publicar únicamente agregados aprobados.'},
+ 15:{audience:'conditional',reason:'Validar instrumentos únicos y evidencia de apoyo del sistema; excluir negociaciones.'},
+ 16:{audience:'public',reason:'Solo cooperación aprobada y autorizada para publicación; separar financiera y no monetaria.'},
+ 17:{audience:'conditional',reason:'Requiere metas, ponderaciones y avance aprobados; validar publicación del agregado.'}
+};
+export const publicIndicatorIds=indicators.filter(i=>indicatorAudience[i.id].audience==='public').map(i=>i.id);
+export const visibleIndicators=(internal:boolean)=>indicators.filter(i=>internal||publicIndicatorIds.includes(i.id));

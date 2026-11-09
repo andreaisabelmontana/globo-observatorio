@@ -1,3 +1,4 @@
+import {palette} from './palette.ts';
 import {group, summarize, cutoffYear} from './cooperation.ts';
 import type {Interaction} from './cooperation.ts';
 
@@ -14,10 +15,10 @@ export function executiveSummary(rows:Interaction[],year:number) {
  const cutoff=`${referenceYear}-10-31`,deadline=`${referenceYear}-11-30`;
  const instruments=approved.filter(r=>r.type==='Convenio'||r.type==='Memorando');
  const states=[
- {name:'Vigentes · más de 30 días',short:'Vigentes',color:'#72C6A2',value:instruments.filter(r=>r.endDate>deadline).length},
- {name:'Por vencer · 30 días',short:'Por vencer',color:'#F9D248',value:instruments.filter(r=>r.endDate>=cutoff&&r.endDate<=deadline).length},
- {name:'Vencidos',short:'Vencidos',color:'#FF8E91',value:instruments.filter(r=>r.endDate&&r.endDate<cutoff).length},
- {name:'Sin fecha de cierre',short:'Sin fecha',color:'#9DAFC4',value:instruments.filter(r=>!r.endDate).length}
+ {name:'Vigentes · más de 30 días',short:'Vigentes',color:palette.green,value:instruments.filter(r=>r.endDate>deadline).length},
+ {name:'Por vencer · 30 días',short:'Por vencer',color:palette.amber,value:instruments.filter(r=>r.endDate>=cutoff&&r.endDate<=deadline).length},
+ {name:'Vencidos',short:'Vencidos',color:palette.red,value:instruments.filter(r=>r.endDate&&r.endDate<cutoff).length},
+ {name:'Sin fecha de cierre',short:'Sin fecha',color:palette.gray,value:instruments.filter(r=>!r.endDate).length}
  ];
  return {...summary,instruments,states,activeInstruments:states[0].value+states[1].value,pending:rows.filter(r=>r.status!=='Aprobada').length,goals:group(approved,'ods','count'),countries:group(approved,'country','count'),partners:group(approved,'partner'),entities:group(approved,'entity','count'),sectors:group(approved,'sector')};
 }
