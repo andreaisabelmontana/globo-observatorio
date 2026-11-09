@@ -96,3 +96,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
 
 /* High-contrast data accents: warm gold for the trend, light blue for amounts. */
 :root{--chart-primary:#E0BF72;--chart-secondary:#97BDD9}.reference-grid .exec-ranking li>div>i{background:#97BDD9}.kpi-sparkline{color:#A9B6C9;opacity:.85}.trend-mode button[aria-pressed=true]{background:#E0BF72;color:#132036}.map-intensity-legend i{background:linear-gradient(90deg,#263d52,#8DC7DF)}.resource-composition i,.resource-indicator li i{background:#97BDD9}.resource-composition b,.resource-indicator li b{background:#9AC7B4}
+/* Preserve square ODS artwork and leave room for full labels and attribution. */
+.public-report .reference-grid .exec-goal-icon{width:72px;height:72px;display:block;margin:0 auto;border:0;object-fit:contain}
+@media(min-width:1101px){.reference-grid.public-grid.exec-grid{grid-template-rows:185px 270px 260px}}
+@media(min-width:761px) and (max-width:1100px){.reference-grid.public-grid.exec-grid{grid-template-rows:180px 270px 210px 260px}}
+@media(max-width:760px){.reference-grid.public-grid>.exec-ods{min-height:265px}.public-report .reference-grid .exec-goal-icon{width:48px;height:48px}}
