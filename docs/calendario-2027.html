@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calendario de eventos internacionales · demostración 2027</title>
+<title>Calendario de eventos internacionales</title>
 <style>
 :root {
   --rojo-bogota: #D52B1E;
@@ -636,7 +636,7 @@ body {
 <div class="header">
   <div class="header-top">Demostración de calendario · información pública</div>
   <h1>Calendario de eventos internacionales · demostración</h1>
-  <div class="header-subtitle">Vigencia 2027 · Demostración pública no oficial · Actualizado 19 noviembre 2026</div>
+  <div class="header-subtitle">2026–2027 · Vista pública no oficial</div>
 </div>
 
 <div class="tabs">
@@ -648,13 +648,13 @@ body {
   <button class="tab" data-section="inteligencia">Validaciones</button>
 </div>
 
-<div class="main"><div class="draft-note"><strong>Demostración no oficial · datos públicos de organizadores.</strong> No representa una agenda ni una selección o participación de ninguna entidad. <button class="btn-reset" onclick="window.print()">Imprimir / PDF</button></div>
+<div class="main">
 
   <!-- FILTROS GLOBALES -->
   <div class="filtros">
     <div>
       <label>Año</label>
-      <select id="f-anio"><option value="2027" selected>2027 · demo</option></select>
+      <select id="f-anio"><option value="2026">2026</option><option value="2027" selected>2027</option></select>
     </div>
     <div>
       <label>Tipo</label>
@@ -719,7 +719,7 @@ body {
 
     <div style="margin-top: 24px;">
       <div class="section-title">
-        Referencias 2027 para revisión <small id="prox-count"></small>
+        Eventos <small id="prox-count"></small>
       </div>
       <div class="tabla-eventos">
         <table>
@@ -741,13 +741,13 @@ body {
 
   <!-- CALENDARIO -->
   <div class="section" id="s-calendario">
-    <div class="section-title">Calendario Mensual 2027 <small id="cal-count"></small></div>
+    <div class="section-title">Calendario Mensual <small id="cal-count"></small></div>
     <div class="calendar-grid" id="calendar-grid"></div>
   </div>
 
   <!-- TIMELINE -->
   <div class="section" id="s-timeline">
-    <div class="section-title">Timeline Anual 2027 <small>Solo fechas públicas exactas. Las referencias pendientes se muestran aparte.</small></div>
+    <div class="section-title">Cronología Anual</div>
     <div class="timeline-container">
       <div class="timeline" id="timeline"></div>
     </div>
@@ -987,14 +987,14 @@ body {
 </div>
 
 <div class="footer">
-  Calendario de eventos internacionales · demostración · Demostración 2027 · Información de organizadores · Sin vinculación institucional
+  Calendario de eventos internacionales · Vista pública no oficial
 </div>
 
 
 <script>
 const HOY = new Date();
 
-const EVENTOS = [{"tipo": "Evento estratégico", "prioridad": "Pendiente", "potencial": "Por evaluar", "dependencia": "No aplica · referencia pública", "voceria": "No aplica", "contenido": "Información pública", "aliado": "", "estado": "Información del organizador", "modalidad": "Por confirmar", "nivel_politico": "Por confirmar", "lat": 8.9824, "lng": -79.5199, "region": "América Latina", "tema": "Economía", "pais_red": "Panamá / CAF", "ciudad": "Ciudad de Panamá", "fecha": "2027-01-27", "mes": 1, "id": "2027-CAF", "evento": "Foro Económico Internacional de la CAF", "fin": "2027-01-28", "fecha_label": "27–28 enero 2027", "certeza": "Fecha publicada por el organizador", "fuente": "CAF · página oficial", "link": "https://www.caf.com/static/forocaf_2027/index_es.html", "nota": "Fecha y sede según el organizador. Esta demostración no representa una agenda, selección ni participación institucional."}, {"tipo": "Evento estratégico", "prioridad": "Pendiente", "potencial": "Por evaluar", "dependencia": "No aplica · referencia pública", "voceria": "No aplica", "contenido": "Información pública", "aliado": "", "estado": "Información del organizador", "modalidad": "Por confirmar", "nivel_politico": "Por confirmar", "lat": 4.711, "lng": -74.0721, "region": "América Latina", "tema": "Democracia deliberativa", "pais_red": "Colombia / Democracy R&D", "ciudad": "Bogotá", "fecha": "2027-06-02", "mes": 6, "id": "2027-DRD", "evento": "Democracy R&D Global Conference", "fin": "2027-06-05", "fecha_label": "2–5 junio 2027", "certeza": "Fecha publicada por el organizador", "fuente": "Democracy R&D · página oficial", "link": "https://drd2027.org/", "nota": "Fecha y sede según el organizador. Esta demostración no representa una agenda, selección ni participación institucional. Bogotá: 2–3 junio Democracy R&D Meeting y 4–5 junio Demo.Reset. Post Conference en Brasília: 7–8 junio, actividad separada."}];
+const EVENTOS = [{"tipo": "Día internacional", "prioridad": "Pendiente", "potencial": "Por evaluar", "dependencia": "No aplica · referencia pública", "voceria": "No aplica", "contenido": "Información pública", "aliado": "", "estado": "Información del organizador", "modalidad": "Por confirmar", "nivel_politico": "Por confirmar", "lat": null, "lng": null, "region": "Global", "tema": "Accesibilidad", "pais_red": "Naciones Unidas", "ciudad": "", "fecha": "2026-01-04", "mes": 1, "id": "ONU-BRAILLE", "evento": "Día Mundial del Braille", "fin": "", "fecha_label": "4 enero 2026", "certeza": "Fecha publicada por Naciones Unidas", "fuente": "Naciones Unidas", "link": "https://www.un.org/es/observances/braille-day", "nota": "Conmemoración internacional del calendario público de Naciones Unidas. Sin información institucional."}, {"tipo": "Día internacional", "prioridad": "Pendiente", "potencial": "Por evaluar", "dependencia": "No aplica · referencia pública", "voceria": "No aplica", "contenido": "Información pública", "aliado": "", "estado": "Información del organizador", "modalidad": "Por confirmar", "nivel_politico": "Por confirmar", "lat": null, "lng": null, "region": "Global", "tema": "Educación", "pais_red": "Naciones Unidas", "ciudad": "", "fecha": "2026-01-24", "mes": 1, "id": "ONU-EDUCACION", "evento": "Día Internacional de la Educación", "fin": "", "fecha_label": "24 enero 2026", "certeza": "Fecha publicada por Naciones Unidas", "fuente": "Naciones Unidas", "link": "https://www.un.org/es/node/135978", "nota": "Conmemoración internacional del calendario público de Naciones Unidas. Sin información institucional."}, {"tipo": "Día internacional", "prioridad": "Pendiente", "potencial": "Por evaluar", "dependencia": "No aplica · referencia pública", "voceria": "No aplica", "contenido": "Información pública", "aliado": "", "estado": "Información del organizador", "modalidad": "Por confirmar", "nivel_politico": "Por confirmar", "lat": null, "lng": null, "region": "Global", "tema": "Medio ambiente", "pais_red": "Naciones Unidas", "ciudad": "", "fecha": "2026-02-02", "mes": 2, "id": "ONU-HUMEDALES", "evento": "Día Mundial de los Humedales", "fin": "", "fecha_label": "2 febrero 2026", "certeza": "Fecha publicada por Naciones Unidas", "fuente": "Naciones Unidas", "link": "https://www.un.org/es/node/135978", "nota": "Conmemoración internacional del calendario público de Naciones Unidas. Sin información institucional."}, {"tipo": "Evento estratégico", "prioridad": "Pendiente", "potencial": "Por evaluar", "dependencia": "No aplica · referencia pública", "voceria": "No aplica", "contenido": "Información pública", "aliado": "", "estado": "Información del organizador", "modalidad": "Por confirmar", "nivel_politico": "Por confirmar", "lat": 8.9824, "lng": -79.5199, "region": "América Latina", "tema": "Economía", "pais_red": "Panamá / CAF", "ciudad": "Ciudad de Panamá", "fecha": "2027-01-27", "mes": 1, "id": "2027-CAF", "evento": "Foro Económico Internacional de la CAF", "fin": "2027-01-28", "fecha_label": "27–28 enero 2027", "certeza": "Fecha publicada por el organizador", "fuente": "CAF · página oficial", "link": "https://www.caf.com/static/forocaf_2027/index_es.html", "nota": "Fecha y sede según el organizador. Esta demostración no representa una agenda, selección ni participación institucional."}, {"tipo": "Evento estratégico", "prioridad": "Pendiente", "potencial": "Por evaluar", "dependencia": "No aplica · referencia pública", "voceria": "No aplica", "contenido": "Información pública", "aliado": "", "estado": "Información del organizador", "modalidad": "Por confirmar", "nivel_politico": "Por confirmar", "lat": 4.711, "lng": -74.0721, "region": "América Latina", "tema": "Democracia deliberativa", "pais_red": "Colombia / Democracy R&D", "ciudad": "Bogotá", "fecha": "2027-06-02", "mes": 6, "id": "2027-DRD", "evento": "Democracy R&D Global Conference", "fin": "2027-06-05", "fecha_label": "2–5 junio 2027", "certeza": "Fecha publicada por el organizador", "fuente": "Democracy R&D · página oficial", "link": "https://drd2027.org/", "nota": "Fecha y sede según el organizador. Esta demostración no representa una agenda, selección ni participación institucional. Bogotá: 2–3 junio Democracy R&D Meeting y 4–5 junio Demo.Reset. Post Conference en Brasília: 7–8 junio, actividad separada."}];
 
 // Sugerencias de inteligencia (replicado del Excel)
 const SUGERENCIAS = {_default:{msg:"",op:"",aliados:"",tags:""}};
@@ -1015,7 +1015,7 @@ let chartInstances = {};
 
 function eventosFiltrados() {
   return EVENTOS.filter(e =>
-    (!filtros.anio || filtros.anio === "2027") &&
+    (!filtros.anio || e.fecha.slice(0,4) === filtros.anio) &&
     (!filtros.tipo || e.tipo === filtros.tipo) &&
     (!filtros.tema || e.tema === filtros.tema) &&
     (!filtros.region || e.region === filtros.region) &&
@@ -1407,7 +1407,7 @@ function ficha(e){return `<div class="event-item" tabindex="0" role="button" onc
 function actualizarKPIs(d){let vals={'k-total':d.length,'k-alta':d.filter(e=>e.certeza.startsWith('Fecha publicada')).length,'k-media':d.filter(e=>e.fecha&&!e.certeza.startsWith('Fecha publicada')).length,'k-baja':d.filter(e=>!e.fecha).length,'k-prox':d.filter(e=>e.fecha&&e.certeza.startsWith('Fecha publicada')&&(formatearFecha(e.fecha)-HOY)/86400000>=0&&(formatearFecha(e.fecha)-HOY)/86400000<=30).length,'k-dn':0,'k-di':0,'k-er':d.filter(e=>!e.ciudad).length};Object.entries(vals).forEach(([k,v])=>document.getElementById(k).textContent=v)}
 function renderChart(id,type,data){let c=document.getElementById(id);let wrap=c.parentNode;let old=wrap.querySelector('.simple-chart');if(old)old.remove();c.style.display='none';let div=document.createElement('div');div.className='simple-chart';div.innerHTML=data.labels.map((l,i)=>`<div class="bar-row"><span>${l}</span><div class="bar" style="width:${Math.max(0,data.datasets[0].data[i])*22}px"></div><b>${data.datasets[0].data[i]}</b></div>`).join('');wrap.appendChild(div)}
 const oldDashboard=renderDashboard;renderDashboard=function(d){oldDashboard(d);document.getElementById('prox-count').textContent=`(${d.length} referencias)`;document.getElementById('proximos-eventos').innerHTML=d.map(e=>`<tr><td>${fechaTexto(e)}</td><td>${e.evento}</td><td>${e.certeza}</td><td>${e.tema}</td><td>No se registra</td><td><button class="btn-reset" onclick="abrirModal('${e.id}')">Ver detalle</button></td></tr>`).join('')};
-function renderCalendario(d){document.getElementById('cal-count').textContent=`(${d.length} referencias)`;document.getElementById('calendar-grid').innerHTML=[...Array(12)].map((_,i)=>`<div class="month-card"><div class="month-header"><span class="month-name">${nombreMes(i+1)} 2027</span><span>${d.filter(e=>e.mes===i+1).length}</span></div>${d.filter(e=>e.mes===i+1).map(ficha).join('')||'<p class="empty">Sin referencias registradas</p>'}</div>`).join('')+`<div class="month-card"><div class="month-header">Fecha por confirmar</div>${d.filter(e=>!e.mes).map(ficha).join('')||'<p class="empty">Sin pendientes</p>'}</div>`}
+function renderCalendario(d){document.getElementById('cal-count').textContent=`(${d.length} referencias)`;document.getElementById('calendar-grid').innerHTML=[...Array(12)].map((_,i)=>`<div class="month-card"><div class="month-header"><span class="month-name">${nombreMes(i+1)} ${filtros.anio}</span><span>${d.filter(e=>e.mes===i+1).length}</span></div>${d.filter(e=>e.mes===i+1).map(ficha).join('')||'<p class="empty">Sin referencias registradas</p>'}</div>`).join('')+`<div class="month-card"><div class="month-header">Fecha por confirmar</div>${d.filter(e=>!e.mes).map(ficha).join('')||'<p class="empty">Sin pendientes</p>'}</div>`}
 function renderTimeline(d){document.getElementById('timeline').innerHTML=d.filter(e=>e.fecha&&e.certeza.startsWith('Fecha publicada')).sort((a,b)=>a.fecha.localeCompare(b.fecha)).map(ficha).join('')+'<h3 style="padding:12px">Pendientes de fecha / verificación</h3>'+d.filter(e=>!e.fecha||!e.certeza.startsWith('Fecha publicada')).map(ficha).join('')}
 function renderTabla(d){document.getElementById('tabla-count').textContent=`(${d.length} referencias)`;document.getElementById('tabla-eventos-body').innerHTML=d.map(e=>`<tr><td>${fechaTexto(e)}</td><td><button class="event-link" onclick="abrirModal('${e.id}')">${e.evento}</button></td><td>${e.tipo}</td><td>${e.tema}</td><td>Por definir</td><td>No se registra</td><td>${e.ciudad||'Por confirmar'}</td><td>${e.link?`<a href="${e.link}" target="_blank" rel="noopener noreferrer">Fuente oficial</a>`:'Pendiente de fuente pública'}</td></tr>`).join('')}
 function renderInteligencia(d){document.getElementById('inteligencia-list').innerHTML=d.map(e=>`<div class="month-card" style="margin-bottom:16px"><div class="month-header">${e.evento}</div><div style="padding:16px"><p><strong>${fechaTexto(e)} · ${e.certeza}</strong></p><p>${e.nota}</p><p>Información pública del organizador; sin datos institucionales.</p></div></div>`).join('')}
